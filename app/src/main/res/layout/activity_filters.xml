@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".filters.FiltersActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/filtersToolBar"
+        android:background="#fff">
+        <include layout="@layout/toolbar"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/costAndRelatedLayout"
+        android:background="#fff"
+        android:layout_below="@+id/filtersToolBar">
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:id="@+id/matchedFlightsLayout">
+            <include layout="@layout/filterscustom"/>
+        </RelativeLayout>
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:background="@android:color/darker_gray"/>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/cheapestPriceLayout">
+            <include layout="@layout/filterscustom"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/clearFiltersLayout"
+        android:layout_below="@+id/costAndRelatedLayout"
+        android:layout_marginTop="2dp"
+        android:background="#fff">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Clear Filters"
+            android:textSize="15dp"
+            android:layout_centerVertical="true"
+            android:gravity="center"/>
+    </RelativeLayout>
+    <android.support.design.widget.TabLayout
+        android:id="@+id/FiltersTabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        app:tabGravity="fill"
+        app:tabTextColor="#8c8c8c"
+        android:layout_below="@+id/clearFiltersLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:fillViewport="false"
+        style="@style/MyCustomTablayout"
+        app:tabTextAppearance="@style/MineCustomTabText"
+        android:layout_marginTop="3dp"
+        />
+    <android.support.v4.view.ViewPager
+        android:layout_below="@id/FiltersTabs"
+        android:id="@+id/filterViewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btApplyFilters"
+        android:layout_marginTop="2dp"
+
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Apply Filters"
+        android:id="@+id/btApplyFilters"
+        android:textColor="#fff"
+        android:background="#dd4f43"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

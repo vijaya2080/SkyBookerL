@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/main_rel"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:layout_marginTop="7dp"
+    android:background="?attr/selectableItemBackground">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/welcomeImg"
+            android:src="@android:drawable/ic_menu_myplaces" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/welcomeImg"
+            android:text="Coach"
+            android:id="@+id/tv_welcomeTitle"
+            android:gravity="center"
+            android:textSize="15dp"
+            android:paddingLeft="10dp"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>

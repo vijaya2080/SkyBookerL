@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".myaccount.billing.BillingDetailsActivity">
+
+    <include
+        android:id="@+id/coTravellerToolBar"
+        layout="@layout/toollayout">
+    </include>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/addCoTravellerLay"
+        android:layout_below="@+id/coTravellerToolBar"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp">
+        <include layout="@layout/addandremovelayout"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/removeCoTravellerLay"
+        android:layout_below="@+id/coTravellerToolBar"
+        android:layout_toLeftOf="@+id/addCoTravellerLay"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:visibility="gone">
+        <include layout="@layout/addandremovelayout"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:id="@+id/coTravellerLine"
+        android:layout_below="@+id/addCoTravellerLay"
+        android:background="@drawable/line">
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_addCoTravelerDetails"
+        android:text="Add Travelers Details"
+        android:layout_below="@+id/coTravellerLine"
+        android:textSize="15dp"
+        android:textColor="#000"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/coTravelerRV"
+        android:layout_below="@+id/tv_addCoTravelerDetails">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+
+</RelativeLayout>

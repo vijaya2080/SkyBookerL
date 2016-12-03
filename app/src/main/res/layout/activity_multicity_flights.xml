@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/multiFlightsToolBar">
+        <include layout="@layout/relatedflightscustomtoolbar"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/multiFlitersLay"
+        android:layout_below="@+id/multiFlightsToolBar"
+        android:orientation="horizontal"
+        android:background="#fff">
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/multiSortLayout">
+            <include layout="@layout/relatedflightspagerlayout"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/multiFiltersLayout">
+            <include layout="@layout/relatedflightspagerlayout"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/multiNearbyLayout">
+            <include layout="@layout/relatedflightspagerlayout"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/multiFlexibleLayout">
+            <include layout="@layout/relatedflightspagerlayout"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/multiBookAndEarnLayout"
+        android:layout_below="@+id/multiFlitersLay"
+        android:background="#6b4289">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/sym_def_app_icon"
+            android:id="@+id/multiAppIcon"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Book and Earn Double Points!"
+            android:textColor="#fff"
+            android:textSize="15dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/multiAppIcon"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/multiRelatedFlightsMain"
+        android:layout_below="@+id/multiBookAndEarnLayout"
+        android:layout_marginTop="5dp"
+        android:background="#fff">
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/multiFlightsRv">
+
+        </android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
+</RelativeLayout>

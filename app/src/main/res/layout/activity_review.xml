@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/SingleFlightToolBar"
+        layout="@layout/toollayout">
+    </include>
+    <RelativeLayout
+        android:id="@+id/toandfromSingleRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:layout_below="@+id/SingleFlightToolBar">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_toSingleFlightname"
+            android:textSize="18sp"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold"
+            android:text="JLR"
+            android:layout_alignTop="@+id/im_toandfromflight" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/im_toandfromflight"
+            android:src="@mipmap/toandfromflightimage"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/tv_toSingleFlightname" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_fromsingleFlightname"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:text="LBD"
+            android:layout_toRightOf="@+id/im_toandfromflight"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="day,date"
+            android:layout_centerHorizontal="true"
+            android:textSize="12dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/tv_SingleFlightDate" />
+        <TextView
+            android:id="@+id/tv_SingleElightCost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="354354"
+            android:layout_alignParentRight="true"
+            android:textSize="16dp"
+            android:textColor="#3ab5e6"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:id="@+id/SingleFlightSrollview"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toandfromSingleRL"
+        android:layout_above="@+id/Bt_SingleFlightCountinueRL">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:weightSum="1"
+                android:id="@+id/toAndFromSingleFlightRL">
+                <include layout="@layout/toandfromsingleflightl"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:visibility="visible"
+                android:layout_below="@+id/toAndFromSingleFlightRL"
+                android:id="@+id/SingleFlightDetailsRL"
+                android:layout_marginTop="10dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:id="@+id/innerSingleFlightDetailsRL"
+                    android:background="@color/BarColor"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18dp"
+                        android:text="Flight Details"
+                        android:textColor="#FFF"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="5dp"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/tv_FlightDetails"
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/flightDetailslayout1"
+                    android:layout_marginLeft="10dp"
+                    android:visibility="visible"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/innerSingleFlightDetailsRL">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imSingleFlightMulAir"
+
+                        android:src="@mipmap/fly"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_bgsaveflexibleDate"
+                        android:layout_marginRight="20dp"
+                        android:textSize="12dp"
+                        android:background="#80b449"
+                        android:textColor="#fff"
+                        android:text="Save$18 on a Flexible date"
+                        android:layout_alignParentRight="true"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/SingleFlightDetails"
+                        android:textSize="13dp"
+                        android:text="flightdescription"
+                        android:textStyle="normal"
+                        android:layout_below="@+id/imSingleFlightMulAir"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_toFlightTimes"
+                        android:layout_marginTop="3dp"
+                        android:layout_below="@+id/SingleFlightDetails"
+                        android:text="02:40p"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_toFlightStopName"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_below="@+id/SingleFlightDetails"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/tv_toFlightTimes"
+                        android:text="JLR"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/im_toandfromflightDetails"
+                        android:src="@mipmap/toandfromflightimage"
+                        android:layout_below="@+id/SingleFlightDetails"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_toRightOf="@+id/tv_toFlightStopName"
+                        android:layout_toEndOf="@+id/tv_toFlightStopName" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_fromFlightTimes"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_toRightOf="@+id/im_toandfromflightDetails"
+                        android:layout_below="@+id/SingleFlightDetails"
+                        android:text="04:40a"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_fromFlightStopName"
+                        android:layout_marginLeft="20dp"
+                        android:layout_below="@+id/SingleFlightDetails"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="3dp"
+                        android:layout_toRightOf="@+id/tv_fromFlightTimes"
+                        android:text="LBD"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_fromFlightJournyTime"
+                        android:layout_marginLeft="20dp"
+                        android:layout_below="@+id/SingleFlightDetails"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_alignParentRight="true"
+                        android:text="totaltime"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_changeAitport"
+                        android:layout_below="@+id/tv_toFlightTimes"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="6dp"
+                        android:textSize="12dp"
+                        android:text="You have an airportchange"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_overniteFlight"
+                        android:layout_below="@+id/tv_changeAitport"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="5dp"
+                        android:textSize="12dp"
+                        android:text="Overnight flight"/>
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:id="@+id/im_rFlightBalert"
+                        android:src="@mipmap/i"
+                        android:layout_above="@+id/tv_overriteFlightdesc"
+                        android:layout_toEndOf="@+id/SingleFlightDetails" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_overriteFlightdesc"
+                        android:layout_below="@+id/tv_overniteFlight"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="5dp"
+                        android:textSize="12dp"
+                        android:text="Alliance Air Operaters Flight 9654"/>
+                </RelativeLayout>
+                <LinearLayout
+                    android:id="@+id/flightDetailslayoutEx2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="#fff"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/flightDetailslayout1">
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/ReviewRelativeExLayout"
+                    android:layout_below="@+id/flightDetailslayoutEx2">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_overriteFlightDetails"
+                        android:layout_centerVertical="true"
+                        android:textSize="12dp"
+                        android:textColor="#0000ff"
+                        android:text="FlightDetails"/>
+
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="5dp"
+                        android:src="@mipmap/downarrow"
+                        android:id="@+id/ElightDetailsExtension"/>
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="5dp"
+                        android:visibility="gone"
+                        android:src="@mipmap/up"
+                        android:id="@+id/ElightDetailsExtensionup"/>
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/SingleFlightDetailsRL"
+                android:id="@+id/SingleTravelSafeRL">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:id="@+id/innerSingleTravelSafeRL"
+                    android:background="@color/BarColor"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18dp"
+                        android:text="TravelSafe"
+                        android:textColor="#FFF"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="5dp"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/tv_SingleTravelSafe"
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/innerSingleTravelSafeRL"
+                    android:id="@+id/layoutWeightTProtectincludeRL">
+                    <include layout="@layout/customtravelsafe"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@+id/layoutWeightTProtectincludeRL"
+                    android:id="@+id/layoutWeightRL1">
+                    <include layout="@layout/customreview1"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@+id/layoutWeightRL1"
+                    android:id="@+id/layoutWeightRL2">
+                    <include layout="@layout/customreview2"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layoutWeightRL2"
+                    android:id="@+id/layoutWeightTAssistRL3">
+                    <include layout="@layout/reviewcustoml"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@+id/layoutWeightTAssistRL3"
+                    android:id="@+id/layoutWeightRL4">
+                    <include layout="@layout/customreview1"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@+id/layoutWeightRL4"
+                    android:id="@+id/layoutWeightRL5">
+                    <include layout="@layout/customreview2"/>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fff"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/SingleTravelSafeRL"
+                android:id="@+id/SingleTripExtraDetailsRL">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:id="@+id/innerSingleTripextraDetailsRL"
+                    android:background="@color/BarColor"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18dp"
+                        android:text="Trip Extras"
+                        android:textColor="#FFF"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="5dp"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/tv_SingleTripExtraDetails" />
+                </RelativeLayout>
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:id="@+id/im_TripExtrasReview"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/innerSingleTripextraDetailsRL"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/i"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14dp"
+                    android:text="Pic your Seats Before It's Gone"
+                    android:layout_below="@+id/innerSingleTripextraDetailsRL"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/im_TripExtrasReview"
+                    android:layout_marginLeft="5dp"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/tv_SingleTripExtraSeatDetails"
+                    />
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="30dp"
+                    android:id="@+id/Button_TripExtraselectedSeats"
+                    android:text="Selected Seats(Optional)"
+                    android:textColor="#fff"
+                    android:background="#dd5044"
+                    android:layout_below="@+id/tv_SingleTripExtraSeatDetails"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fff"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/SingleTripExtraDetailsRL"
+                android:id="@+id/SinglePriceDetailsRL">
+                <include layout="@layout/custom_price"/>
+
+
+        </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:id="@+id/Bt_SingleFlightCountinueRL"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/Bt_SingleFlightCountinue"
+            android:layout_marginRight="20dp"
+            android:textColor="#ffe"
+            android:textStyle="bold"
+            android:background="#dd4f43"
+            android:text="Continue"
+            />
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.3dp"
+            android:layout_below="@+id/Bt_SingleFlightCountinue"
+            android:background="#000"
+            android:layout_marginTop="3dp"
+            android:id="@+id/bottomrelated_view"/>
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:src="@mipmap/i"
+            android:layout_centerVertical="true"
+            android:layout_below="@+id/bottomrelated_view"
+            android:id="@+id/im_relatedBaggedim"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/im_relatedBaggedim"
+            android:text="some airlines may changed"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@+id/bottomrelated_view"
+            android:id="@+id/tv_ReviewmychangeBaggage"/>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
+
+

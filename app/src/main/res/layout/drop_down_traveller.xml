@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Travaller Type"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/tvTravallerType"
+        android:layout_alignTop="@+id/tvTravllerNo"
+        android:layout_alignParentStart="true" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center|center_horizontal"
+            android:id="@+id/imgMinus"
+            android:src="@android:drawable/presence_busy"
+            android:layout_marginRight="3dp"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/tvTravllerNo" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginRight="3dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="31"
+            android:id="@+id/tvTravllerNo"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/imgPlus" />
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:id="@+id/imgPlus"
+            android:src="@android:drawable/ic_input_add"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true" />
+
+
+</RelativeLayout>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="5dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/PriceToolBar"
+        android:id="@+id/innerSinglepriceDetailsRL"
+        android:background="@color/BarColor">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:text="Price Details(USD)"
+            android:textColor="#FFF"
+            android:textStyle="bold"
+            android:layout_marginLeft="5dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/tv_SinglePriceDetails" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@+id/innerSinglepriceDetailsRL">
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="5dp"
+            android:id="@+id/imSingleFlightPricedetails"
+            android:src="@mipmap/fly"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_SingleFlightPriceSuccess"
+            android:layout_marginLeft="20dp"
+            android:textSize="13dp"
+            android:layout_marginTop="5dp"
+            android:text="SuccessfullMessage"
+            android:textStyle="normal"
+            android:layout_toRightOf="@+id/imSingleFlightPricedetails"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_SingleFlightPriceSuccessGuaranteed"
+            android:layout_marginLeft="60dp"
+            android:textSize="13dp"
+            android:textColor="#0000ff"
+            android:layout_marginTop="5dp"
+            android:text="Guarenteed"
+            android:textStyle="normal"
+            android:layout_toRightOf="@+id/tv_SingleFlightPriceSuccess"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imSingleFlightPricedetails"
+            android:id="@+id/weightReviewRL4">
+            <include layout="@layout/customreview3"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/weightReviewRL4"
+            android:id="@+id/weightReviewRL5">
+            <include layout="@layout/customreview4"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:id="@+id/tv_innerTSingleFlightPriceDetailsRL"
+            android:layout_below="@+id/weightReviewRL5">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_SingleFlighttotalDiscount"
+                android:text="Total Discount"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_SingleFlightPriceCost"
+                android:layout_marginRight="10dp"
+                android:text="-$10.00"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentRight="true"/>
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_innerTSingleFlightPriceDetailsRewardPointsRL"
+            android:layout_below="@+id/tv_innerTSingleFlightPriceDetailsRL">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="#7b0c91"
+                android:id="@+id/tv_SingleFlightReward"
+                android:text="CheapOair reward points"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_SingleFlightrewordPoints"
+                android:layout_marginRight="10dp"
+                android:text="3994"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="#0000ff"
+            android:id="@+id/tv_SingleFlightFairRules"
+            android:text="Fare Rules"
+            android:layout_below="@+id/tv_innerTSingleFlightPriceDetailsRewardPointsRL"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_SingleFlightPromoCode"
+            android:text="Enter Promo Code"
+            android:layout_marginTop="5dp"
+            android:textColor="#0000ff"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tv_innerTSingleFlightPriceDetailsRewardPointsRL"/>
+
+        <!--  <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:layout_marginTop="3dp"
+              android:layout_marginLeft="0dp"
+              android:layout_below="@+id/tv_SingleFlightFairRules"
+              android:id="@+id/toAndFromSingleFlightRLinclude">
+              <include layout="@layout/toandfromsingleflight2"/>
+          </RelativeLayout>-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="#000"
+            android:id="@+id/View_SingleFlightDetails"
+            android:layout_below="@+id/tv_SingleFlightFairRules">
+
+        </View>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:id="@+id/tv_SingleFlightTotalCharge"
+            android:text="Total Charge"
+            android:layout_below="@+id/View_SingleFlightDetails"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_SingleFlightTotalChargeCost"
+            android:text="$19996.77"
+            android:textColor="#0000ff"
+            android:layout_marginTop="3dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/View_SingleFlightDetails"/>
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/imSingleFlightPriceCostS"
+            android:layout_below="@+id/tv_SingleFlightTotalChargeCost"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/fly"/>
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/text_input_BillingInfoET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_BillingInfoET"
+            android:hint="City*"
+            android:inputType="text"
+            android:maxLines="1"
+            android:layout_below="@+id/et_updateBillingExpiry" />
+    </android.support.design.widget.TextInputLayout>
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:id="@+id/imageView"
+        android:src="@mipmap/spinner"
+        android:layout_marginRight="30dp"
+        android:layout_alignBottom="@+id/text_input_BillingInfoET"
+        android:layout_toEndOf="@+id/text_input_BillingInfoET"
+        android:layout_marginLeft="10dp"/>
+
+</RelativeLayout>

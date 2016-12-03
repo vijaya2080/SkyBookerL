@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginRight="20dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="10dp">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollLayout"
+        android:layout_above="@+id/btSignin">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/mainRegLayout">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_input_Emaillayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email Adress*"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/etEmail"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1">
+                    <requestFocus/>
+                </EditText>
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_input_Pwdlayout"
+                android:layout_below="@+id/text_input_Emaillayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/etPwd"
+                    android:layout_below="@+id/etEmail"
+                    android:hint="Password*"
+                    android:inputType="textPassword"
+                    android:maxLines="1"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvRecoverPwd"
+                android:layout_below="@+id/text_input_Pwdlayout"
+                android:text="Recover My Password "
+                android:textColor="@color/colorPrimary"
+                android:textSize="15dp"
+                android:layout_marginTop="10dp"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:id="@+id/rewardLayout"
+                android:layout_below="@+id/tvRecoverPwd"
+                android:layout_marginTop="20dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sign In or Register to earn Rewards"
+                    android:textColor="#262626"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btSignin"
+        android:text="Sign In"
+        android:textSize="20dp"
+        android:textColor="#fff"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/mybutton"
+        android:layout_marginBottom="20dp"/>
+
+</RelativeLayout>

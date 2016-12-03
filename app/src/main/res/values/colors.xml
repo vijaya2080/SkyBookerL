@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#125688</color>
+    <color name="colorPrimaryDark">#125688</color>
+    <color name="textColorPrimary">#e0e0e0</color>
+    <color name="BarColor">#0273cb</color>
+    <color name="colorAccent">#125688</color>
+    <color name="ColorCyon">#e0e0e0</color>
+    <color name="searchColor">#fff</color>
+    <color name="rippelColor">#FFFFFF</color>
+
+
+</resources>

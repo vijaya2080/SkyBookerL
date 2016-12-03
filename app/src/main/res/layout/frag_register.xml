@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+   >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollLayout"
+        android:layout_above="@+id/btRegister">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/mainRegLayout">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/text_input_Firstlayout"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="First Name*"
+                android:id="@+id/etFName"
+                android:inputType="text"
+                android:maxLines="1">
+                <requestFocus/>
+            </EditText>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/text_input_LastNamelayout"
+            android:layout_below="@+id/text_input_Firstlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Last Name*"
+                android:id="@+id/etLName"
+                android:inputType="text"
+                android:maxLines="1"/>
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/text_input_EmailReglayout"
+            android:layout_below="@+id/text_input_LastNamelayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email Address*"
+                android:id="@+id/etRegEmail"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"/>
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/text_input_PwdReglayout"
+            android:layout_below="@+id/text_input_EmailReglayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password*"
+                android:inputType="textPassword"
+                android:id="@+id/etRegPwd"
+                android:maxLines="1"/>
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/text_input_NewPwdReglayout"
+            android:layout_below="@+id/text_input_PwdReglayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Re-enter New Password*"
+                android:id="@+id/etRegNewPwd"
+                android:inputType="textPassword"
+                android:maxLines="1"/>
+        </android.support.design.widget.TextInputLayout>
+
+    <CheckBox
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:id="@+id/CheckBoxSelected"
+        android:focusable="false"
+        android:clickable="false"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/text_input_NewPwdReglayout">
+    </CheckBox>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="I agree to the "
+        android:id="@+id/tvAgree"
+        android:layout_alignTop="@+id/CheckBoxSelected"
+        android:layout_toRightOf="@+id/CheckBoxSelected"
+        android:layout_toEndOf="@+id/CheckBoxSelected" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Terms and Conditions"
+        android:id="@+id/tvTermsAndC"
+        android:textSize="15dp"
+        android:textColor="@color/colorPrimary"
+        android:gravity="center_vertical"
+        android:layout_alignTop="@+id/tvAgree"
+        android:layout_toRightOf="@+id/tvAgree"
+        android:layout_toEndOf="@+id/tvAgree" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:id="@+id/rewardLay"
+            android:layout_below="@+id/tvTermsAndC"
+            android:layout_marginTop="20dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sign In or Register to earn Rewards"
+                android:textColor="#262626"/>
+        </RelativeLayout>
+    </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btRegister"
+        android:text="Register"
+        android:textSize="18dp"
+        android:textColor="#fff"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/mybutton" />
+
+</RelativeLayout>

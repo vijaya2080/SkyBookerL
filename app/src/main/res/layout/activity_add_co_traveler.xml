@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".myaccount.cotravelers.AddCoTravelerActivity">
+
+    <include
+        android:id="@+id/add_CTToolBar"
+        layout="@layout/toollayout">
+    </include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/add_CTToolBar"
+        android:layout_above="@+id/btCTAdd"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/TravellerDetailsLayout"
+        android:background="#fff">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/layout_CoTraveller"
+            android:background="@color/BarColor">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Personnal Information"
+                android:textColor="#FFF"
+                android:layout_marginLeft="5dp"
+                android:layout_centerInParent="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/tv_CoTravellerDetails" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_CoTraveller"
+            android:id="@+id/CotravellertitleLayout"
+            android:orientation="horizontal">
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_input_CoTravellersTitleLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:layout_weight="1.5">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Title*"
+                    android:id="@+id/et_CoTravellersTitleLayout"
+                    android:drawableEnd="@mipmap/spinner"
+                    android:singleLine="true"
+                    android:focusableInTouchMode="false"
+                    android:editable="false" />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_input_CoTravellerFirstnameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/et_CoTravellerFirstnameLayout"
+                    android:hint="First Name"
+                    android:singleLine="true" />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/CotravellertitleLayout"
+            android:orientation="horizontal"
+            android:id="@+id/Cotraveller_middle">
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_input_CotravellerMiddlenameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/et_CotravellerMiddlenameLayout"
+                    android:hint="Middle Name"
+                    android:singleLine="true" />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_input_CotravellerLastNameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/et_CotravellerLastNameLayout"
+                    android:hint="Last Name"
+                    android:singleLine="true" />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Cotraveller_middle"
+            android:id="@+id/CotravellerdobLayout"
+            android:orientation="horizontal">
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_input_CotravellerDOBLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/et_CotravellerDOBLayout"
+                    android:hint="DOB*"
+                    android:focusableInTouchMode="false"
+                    android:editable="false"
+                    android:drawableEnd="@mipmap/calendar"
+                    android:singleLine="true" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_input_CotravellerGenderLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/et_CotravellerGenderLayout"
+                    android:hint="Gender"
+                    android:singleLine="true"
+                    android:focusableInTouchMode="false"
+                    android:editable="false"
+                    android:drawableEnd="@mipmap/spinner" />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/CotravellerdobLayout"
+            android:id="@+id/CotravelleradditionalLayout"
+            android:orientation="horizontal">
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/text_input_CotravellerAdditionalLayout"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Additional Requests(Frequent Flyer and more..)"
+                    android:id="@+id/et_CotravellerAdditionalLayout"
+                    android:singleLine="true"
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:visibility="gone"
+                android:src="@mipmap/downarrow"
+                android:id="@+id/ElightDetailsCoTravelerExtension"/>
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/up"
+                android:id="@+id/ElightDetailsCoTravelerExtensionup"/>
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/CotravelleradditionalLayout"
+            android:id="@+id/RelativeCoTravelLayout1">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/CotravellerdobLayoutEx"
+                android:orientation="horizontal">
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/text_input_CotravellerSeatPrefeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Seat Pref"
+                        android:id="@+id/et_CotravellerSeatLayout"
+                        android:singleLine="true"
+                        android:drawableEnd="@mipmap/spinner"
+                        android:focusableInTouchMode="false"
+                        android:editable="false" />
+                </android.support.design.widget.TextInputLayout>
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/text_input_CotravellerMealLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/et_CotravellerMealLayout"
+                        android:hint="Meal Pref"
+                        android:singleLine="true"
+                        android:focusableInTouchMode="false"
+                        android:editable="false"
+                        android:drawableEnd="@mipmap/spinner" />
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/previousCotravellersLayoutExt"
+                android:orientation="horizontal"
+                android:layout_below="@+id/CotravellerdobLayoutEx">
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/text_input_CTSpecialServicesExLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Special Services"
+                        android:drawableEnd="@mipmap/spinner"
+                        android:singleLine="true"
+                        android:focusableInTouchMode="false"
+                        android:editable="false"
+                        android:id="@+id/et_CTPreviousTravellersExLayout" />
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/previousCotravellersLayoutExtAddr"
+                android:orientation="horizontal"
+                android:layout_below="@+id/previousCotravellersLayoutExt">
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/text_input_CTAddrExLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="TSA Redress#"
+                        android:drawableEnd="@mipmap/spinner"
+                        android:singleLine="true"
+                        android:focusableInTouchMode="false"
+                        android:editable="false"
+                        android:id="@+id/et_CoTravelerAdderExLayout" />
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/previousCotravellersLayoutExtAddr"
+                android:orientation="horizontal"
+                android:id="@+id/Cotraveller_flyer">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/text_input_CotravelerFlyerFrequentLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/et_CotravellerFrquentFlyerLayout"
+                        android:hint="Frequent Flyer Information"
+                        android:singleLine="true" />
+                </android.support.design.widget.TextInputLayout>
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@mipmap/addtext"
+                    android:id="@+id/AddFlyerInfo"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Cotraveller_flyer"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:id="@+id/CoTravellerlinear_frequent">
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/text_input_CoTravellerAirlineLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="11dp"
+                    android:layout_below="@+id/text_input_CTFrequentFlyerInfoLayout">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Airline*"
+                        android:singleLine="true"
+                        android:focusableInTouchMode="false"
+                        android:editable="false"
+                        android:drawableEnd="@mipmap/spinner"
+                        android:id="@+id/et_myDetailsAirlineLayout" />
+                </android.support.design.widget.TextInputLayout>
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/text_input_CTFrequentFlyerLayout"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text_input_CTAirlineLayout">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Frequent Flyer Number"
+                        android:singleLine="true"
+                        android:id="@+id/et_CTFrequentFlyerLayout" />
+                </android.support.design.widget.TextInputLayout>
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:id="@+id/CT_minus"
+                    android:src="@mipmap/minusbt"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+    </ScrollView>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:id="@+id/btCTAdd"
+        android:textColor="#fff"
+        android:background="#dd4f43"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

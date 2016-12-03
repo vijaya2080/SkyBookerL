@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".myaccount.billing.BillingDetailsActivity">
+
+    <include
+        android:id="@+id/billingToolBar"
+        layout="@layout/toollayout">
+    </include>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/addCardLay"
+        android:layout_below="@+id/billingToolBar"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp">
+        <include layout="@layout/addandremovelayout"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:id="@+id/billingLine"
+        android:layout_below="@+id/addCardLay"
+        android:background="@drawable/line">
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_addNewCard"
+        android:text="Add New Credit Card Information"
+        android:layout_below="@+id/billingLine"
+        android:textSize="15dp"
+        android:textColor="#000"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/addCardRv"
+        android:layout_below="@+id/tv_addNewCard">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+
+</RelativeLayout>

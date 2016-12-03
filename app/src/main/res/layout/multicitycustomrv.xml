@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:background="#ececec"
+    android:layout_marginTop="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/multiCostLayout"
+        android:layout_marginTop="5dp">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/right_arrow"
+            android:layout_alignParentRight="true"
+            android:id="@+id/multiFlightNavigate"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$3041"
+            android:textSize="15dp"
+            android:id="@+id/tv_multiCost"
+            android:textColor="@color/colorPrimary"
+            android:layout_alignBottom="@+id/multiFlightNavigate"
+            android:layout_toStartOf="@+id/multiFlightNavigate" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/multiAirLineImg"
+            android:src="@android:mipmap/sym_def_app_icon"
+            />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/multiFirstLayout"
+        android:orientation="horizontal"
+        android:layout_below="@+id/multiCostLayout">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:id="@+id/tv_multiDepartFromTime"
+            android:text="05:45P"
+            android:textSize="12dp"
+            android:textColor="#000"/>
+
+        <RelativeLayout
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/multiFirstRL">
+            <include layout="@layout/toandfromcity"/>
+        </RelativeLayout>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:id="@+id/tv_multiDepartToime"
+            android:text="05:45P"
+            android:textColor="#000"
+            android:textSize="12dp"
+            android:layout_marginRight="5dp"
+            android:textAlignment="viewEnd"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/multiSecondLayout"
+        android:orientation="horizontal"
+        android:layout_below="@+id/multiFirstLayout">
+
+        <TextView
+            android:layout_width="0.5dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:id="@+id/tv_multiReturnToTime"
+            android:text="05:45P"
+            android:textSize="12dp"
+            android:textColor="#000"/>
+
+        <RelativeLayout
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/multiSecondFlight"
+            android:layout_weight="1">
+            <include layout="@layout/toandfromcity"/>
+        </RelativeLayout>
+        <TextView
+            android:layout_width="0.5dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:id="@+id/tv_multiReturnFromTime"
+            android:text="05:45P"
+            android:textColor="#000"
+            android:textSize="12dp"
+            android:layout_marginRight="5dp"
+            android:textAlignment="viewEnd"/>
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/multiFlihtsSaving"
+        android:layout_below="@+id/multiSecondLayout"
+        android:text="sadkfdkjfheiofhndkjfh"
+        android:textSize="14dp"
+        android:textColor="#613c7e"
+        android:textStyle="bold"/>
+
+</RelativeLayout>

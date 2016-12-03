@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff">
+
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="45dp"
+        android:id="@+id/toAndFromIcon"
+        android:src="@mipmap/ic_launcher"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Text"
+        android:id="@+id/tvToAndFromText"
+        android:textSize="15dp"
+        android:textColor="@color/colorPrimary"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/toAndFromIcon"
+        android:layout_toEndOf="@+id/toAndFromIcon" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="City"
+        android:id="@+id/tvToAndFromCity"
+        android:textColor="#000"
+        android:textSize="18dp"
+        android:layout_alignStart="@+id/tvToAndFromText"
+        android:layout_below="@+id/tvToAndFromText"
+        android:layout_toRightOf="@+id/toAndFromIcon"
+        android:layout_toEndOf="@+id/toAndFromIcon" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Large Text"
+        android:id="@+id/tvAirPort"
+        android:paddingLeft="10dp"
+        android:layout_alignBottom="@+id/tvToAndFromCity"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

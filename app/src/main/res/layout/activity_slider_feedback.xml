@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="in.example.skybooker.communication.SliderFeedbackActivity">
+
+    <include
+        android:id="@+id/sliderFeedbackToolBar"
+        layout="@layout/toollayout">
+    </include>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@+id/sliderFeedbackToolBar">
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/imgFeedback"
+        android:src="@mipmap/chat"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="We're here to help!"
+        android:textColor="#000"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/tv_feedbackText"
+        android:layout_toRightOf="@+id/imgFeedback" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Helooooooooodf"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/tv_feedbackSubText"
+        android:layout_toRightOf="@+id/imgFeedback"
+        android:layout_below="@+id/tv_feedbackText" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/tv_feedbackContact"
+        android:layout_toRightOf="@+id/imgFeedback"
+        android:layout_below="@+id/tv_feedbackSubText"
+        android:text="Contact the Airline"
+        android:textColor="@color/colorPrimary"/>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/text_input_feedbackEmaillayout"
+        android:layout_below="@+id/tv_feedbackContact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Email Address*"
+            android:id="@+id/et_feedbackEmaillayout"
+            android:inputType="textEmailAddress"
+            android:maxLines="1">
+            <requestFocus/>
+        </EditText>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/text_input_feedbackNamelayout"
+        android:layout_below="@+id/text_input_feedbackEmaillayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Full Name*"
+            android:id="@+id/et_feedbackNamelayout"
+            android:inputType="textEmailAddress"
+            android:maxLines="1">
+        </EditText>
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/text_input_feedbackMessagelayout"
+        android:layout_below="@+id/text_input_feedbackNamelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Feedback Message*"
+            android:id="@+id/et_feedbackMessagelayout"
+            android:inputType="textEmailAddress"
+            android:maxLines="1">
+        </EditText>
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btFeedback"
+        android:text="Submit"
+        android:textSize="18dp"
+        android:textColor="#fff"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/mybutton" />
+
+    </RelativeLayout>
+</RelativeLayout>

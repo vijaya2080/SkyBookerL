@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#e6e6fa">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/fromCityPoint"
+            android:layout_centerHorizontal="true"
+            android:src="@android:drawable/ic_notification_clear_all" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_customFromCity"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/fromCityPoint"
+            android:text="from"/>
+    </RelativeLayout>
+    <View
+        android:layout_width="30dp"
+        android:layout_height="2dp"
+        android:id="@+id/travelPoint"
+        android:layout_marginTop="9dp"
+        android:layout_marginLeft="-8dp"
+        android:layout_toRightOf="@+id/relativeLayout"
+        android:background="#b6b6b6"/>
+
+
+</RelativeLayout>

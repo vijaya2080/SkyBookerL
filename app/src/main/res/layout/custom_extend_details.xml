@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:layout_marginLeft="2dp"
+        android:id="@+id/flightDetailslayout2">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Depart"
+            android:textSize="14dp"
+            android:id="@+id/tv_SinglePriceDetailsExDepart"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Date"
+            android:textSize="14dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/tv_SinglePriceDetailsExDepart"
+            android:id="@+id/tv_SinglePriceDetailsExDepartDate"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imSingleFlighextMulAirFlight"
+            android:layout_below="@+id/tv_SinglePriceDetailsExDepart"
+            android:src="@mipmap/fly"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_bgsaveexflexibleDate"
+            android:layout_marginRight="20dp"
+            android:textSize="12dp"
+            android:layout_marginTop="2dp"
+            android:background="#80b449"
+            android:textColor="#fff"
+            android:text="Save$18 on a Flexible date"
+            android:layout_alignParentRight="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="AirFlightName"
+            android:textSize="12dp"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@+id/tv_SinglePriceDetailsExDepartDate"
+            android:layout_toRightOf="@+id/imSingleFlighextMulAirFlight"
+            android:id="@+id/tv_SinglePriceDetailsExFlightName"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="AirFligtDesc"
+            android:textSize="12dp"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@+id/tv_SinglePriceDetailsExFlightName"
+            android:layout_toRightOf="@+id/imSingleFlighextMulAirFlight"
+            android:id="@+id/tv_SinglePriceDetailsExAirDesc"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="AirNumber"
+            android:layout_marginLeft="10dp"
+            android:textSize="12dp"
+            android:textColor="#0000ff"
+            android:layout_below="@+id/tv_SinglePriceDetailsExFlightName"
+            android:layout_toRightOf="@+id/tv_SinglePriceDetailsExAirDesc"
+            android:id="@+id/tv_SinglePriceDetailsExAirnumber"
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_below="@+id/imSingleFlighextMulAirFlight"
+            android:id="@+id/Relative_exreviewlayout">
+            <include layout="@layout/custom_reviewact"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginRight="20dp"
+            android:layout_below="@+id/Relative_exreviewlayout"
+            android:weightSum="2"
+            android:layout_marginTop="10dp"
+            android:id="@+id/LinearEx_reviewLayout">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_changeExstartAitport"
+                android:layout_centerVertical="true"
+                android:textSize="12dp"
+                android:layout_weight="1"
+                android:text="StartName"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_FlightNameExFlight"
+                android:layout_weight="1"
+                android:layout_centerVertical="true"
+                android:textSize="12dp"
+                android:text="Hyderbad"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_changeExAitportAlliance"
+            android:layout_below="@+id/LinearEx_reviewLayout"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="6dp"
+            android:textSize="12dp"
+            android:text="Airlines Air Operators Flight 9863"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_changeExTotalTripTime"
+            android:layout_marginRight="20dp"
+            android:layout_below="@+id/tv_changeExAitportAlliance"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:textSize="12dp"
+            android:text="Total Trip Time:02h 00m"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_ReviewFlexibleDate"
+            android:layout_below="@+id/tv_changeExTotalTripTime"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="6dp"
+            android:textSize="12dp"
+            android:text="Airlines Air Operators Flight 9863"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/tv_ReviewFlexibleDate"
+            android:id="@+id/Relative_reviewexDetails">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_overriteExFlightdesc"
+                android:layout_centerVertical="true"
+                android:textSize="12dp"
+                android:text="Alliance Air Operaters Flight 9654"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

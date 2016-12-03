@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/LL"
+    android:layout_marginTop="5dp"
+    android:layout_weight="5">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_SingleFlightTrvelsDetails"
+        android:textSize="10dp"
+        android:layout_weight="1"
+        android:text="Traveler(s)"
+        android:textStyle="normal"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_SingleFlightTrvelsPrice"
+        android:layout_weight="1"
+        android:textSize="10dp"
+        android:text="Best Price"
+
+        android:textStyle="normal"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_SingleFlightTrvelsPriceTax"
+        android:layout_weight="1"
+        android:textSize="10dp"
+        android:text="Taxes and Fees"
+        android:textStyle="normal"/>
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_weight="1"
+        android:id="@+id/imSingleFlightPricedetailscost"
+        android:src="@mipmap/i"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_SingleFlightTrvelsPricesubTotal"
+        android:layout_weight="1"
+        android:textSize="10dp"
+        android:text="SubTotal"
+        android:layout_alignParentRight="true"
+        android:textStyle="normal"/>
+</LinearLayout>

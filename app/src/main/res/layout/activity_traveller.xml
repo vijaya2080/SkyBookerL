@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/travellersToolBar"
+        layout="@layout/toollayout">
+    </include>
+    <RelativeLayout
+        android:id="@+id/toandfromSingleRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:layout_below="@+id/travellersToolBar">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_toSingleFlightname"
+            android:textSize="18sp"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold"
+            android:text="JLR"
+            android:layout_alignTop="@+id/im_toandfromflight" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/im_toandfromflight"
+            android:src="@mipmap/toandfromflightimage"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/tv_toSingleFlightname" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_fromsingleFlightname"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:text="LBD"
+            android:layout_toRightOf="@+id/im_toandfromflight"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="day,date"
+            android:layout_centerHorizontal="true"
+            android:textSize="12dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/tv_SingleFlightDate" />
+        <RelativeLayout
+            android:id="@+id/travelerDetailsLay"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Details"
+            android:textSize="16dp"
+            android:textColor="#3ab5e6"
+            android:layout_marginRight="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/tv_SingleFlightDetails"
+            />
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/downarrow"
+            android:id="@+id/im_detailsextend"/>
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/up"
+            android:id="@+id/im_detailsextendup"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/travellersScroolview"
+        android:layout_below="@+id/toandfromSingleRL"
+        android:layout_above="@+id/BottomTarvelermainRL">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/flightDetailslayoutEx3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:layout_marginLeft="10dp"
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:weightSum="1"
+                android:layout_below="@+id/flightDetailslayoutEx3"
+                android:id="@+id/toAndFromSingleFlightRL">
+                <include layout="@layout/toandfromsingleflightl"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/TravellerProfileLayout"
+                android:layout_below="@+id/toAndFromSingleFlightRL"
+                android:background="#fff"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/ProfileTravaller"
+                    android:src="@android:drawable/ic_menu_myplaces" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/ProfileTravaller"
+                    android:text="Hello,name!"
+                    android:id="@+id/tv_ProfileType"
+                    android:gravity="center"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:paddingLeft="10dp"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/TravellerDetailsLayout"
+                android:background="#fff"
+                android:layout_below="@+id/TravellerProfileLayout"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/layout_Traveller"
+                    android:background="@color/BarColor">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Traveler Details"
+                        android:textColor="#FFF"
+                        android:layout_marginLeft="5dp"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentStart="true"
+                        android:id="@+id/tv_TravellerDetails" />
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/tv_travellerLayout"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/layout_Traveller">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:id="@+id/tv_adult"
+                        android:text="Traveler 1 (Adult)" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/previoustravellersLayout"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:layout_below="@+id/tv_travellerLayout">
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/text_input_myDetailsSpecialServicesLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Previous Travellers"
+                            android:drawableEnd="@mipmap/spinner"
+                            android:singleLine="true"
+                            android:focusableInTouchMode="false"
+                            android:editable="false"
+                            android:id="@+id/et_myDetailsPreviousTravellersLayout" />
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_below="@+id/previoustravellersLayout"
+                    android:id="@+id/spinnertravellertitleLayout"
+                    android:orientation="horizontal">
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/text_input_TravellersTitleLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="11dp"
+                        android:layout_weight="1.5">
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Title*"
+                            android:id="@+id/et_TravellersTitleLayout"
+                            android:drawableEnd="@mipmap/spinner"
+                            android:singleLine="true"
+                            android:focusableInTouchMode="false"
+                            android:editable="false" />
+                    </android.support.design.widget.TextInputLayout>
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/text_input_TravellerFirstnameLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5">
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/et_TravellerFirstnameLayout"
+                            android:hint="First Name"
+                            android:singleLine="true" />
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/spinnertravellertitleLayout"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/traveller_middle">
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/text_input_travellerMiddlenameLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/et_travellerMiddlenameLayout"
+                            android:hint="Middle Name"
+                            android:singleLine="true" />
+                    </android.support.design.widget.TextInputLayout>
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/text_input_travellerLastNameLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/et_travellerLastNameLayout"
+                            android:hint="Last Name"
+                            android:singleLine="true" />
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/traveller_middle"
+                    android:id="@+id/travellerdobLayout"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="horizontal">
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/text_input_travellerDOBLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/et_travellerDOBLayout"
+                            android:hint="DOB*"
+                            android:editable="false"
+                            android:focusableInTouchMode="false"
+                            android:drawableEnd="@mipmap/calendar"
+                            android:singleLine="true" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/text_input_travellerGenderLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/et_travellerGenderLayout"
+                            android:hint="Gender"
+                            android:singleLine="true"
+                            android:focusableInTouchMode="false"
+                            android:editable="false"
+                            android:drawableEnd="@mipmap/spinner" />
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_below="@+id/travellerdobLayout"
+                    android:id="@+id/travelleradditionalLayout"
+                    android:orientation="horizontal">
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/text_input_travellerAdditionalLayout"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Additional Requests(Frequent Flyer and more..)"
+                            android:id="@+id/et_travellerAdditionalLayout"
+                            android:singleLine="true"
+                            android:focusableInTouchMode="false"
+                            android:editable="false"
+                            />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <ImageView
+                        android:id="@+id/ElightDetailsTravelerExtension"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="0.1"
+                        android:padding="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@mipmap/downarrow" />
+                    <ImageView
+                        android:id="@+id/ElightDetailsTravelerExtensionup"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:padding="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:visibility="gone"
+                        android:src="@mipmap/up" />
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_below="@+id/travelleradditionalLayout"
+                    android:id="@+id/RelativeTravelLayout1">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:id="@+id/travellerdobLayoutEx"
+                        android:orientation="horizontal">
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/text_input_travellerSeatPrefeLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Seat Pref"
+                                android:id="@+id/et_travellerSeatLayout"
+                                android:singleLine="true"
+                                android:drawableEnd="@mipmap/spinner"
+                                android:focusableInTouchMode="false"
+                                android:editable="false" />
+                        </android.support.design.widget.TextInputLayout>
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/text_input_travellerMealLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/et_travellerMealLayout"
+                                android:hint="Meal Pref"
+                                android:singleLine="true"
+                                android:focusableInTouchMode="false"
+                                android:editable="false"
+                                android:drawableEnd="@mipmap/spinner" />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/previoustravellersLayoutExt"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="5dp"
+                        android:layout_below="@+id/travellerdobLayoutEx">
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/text_input_myDetailsSpecialServicesExLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Special Services"
+                                android:drawableEnd="@mipmap/spinner"
+                                android:singleLine="true"
+                                android:focusableInTouchMode="false"
+                                android:editable="false"
+                                android:id="@+id/et_myDetailsPreviousTravellersExLayout" />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/previoustravellersLayoutExtAddr"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="5dp"
+                        android:layout_below="@+id/previoustravellersLayoutExt">
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/text_input_myDetailsAddrExLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="TSA Redress#"
+                                android:singleLine="true"
+                                android:id="@+id/et_myDetailsPreviousTravelerAdderExLayout" />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/previoustravellersLayoutExtAddr"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="5dp"
+                        android:id="@+id/traveller_flyer">
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/text_input_travellerFlyerLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:src="@mipmap/fly"
+                                android:focusableInTouchMode="false"
+                                android:editable="false"
+                                android:id="@+id/et_myDetailsPreviousTravelerFlyerExLayout" />
+
+                        </android.support.design.widget.TextInputLayout>
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/text_input_travelerFlyerFrequentLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/et_travellerFrquentFlyerLayout"
+                                android:hint="Frequent Flyer#"
+                                android:singleLine="true" />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#fff"
+
+        android:id="@+id/BottomTarvelermainRL">
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="5dp"
+            android:src="@mipmap/i"
+            android:id="@+id/bottom_textimage"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_TravelerBottomText"
+            android:layout_toRightOf="@+id/bottom_textimage"
+            android:layout_marginLeft="10dp"
+            android:text="addtext" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#000"
+            android:layout_below="@+id/tv_TravelerBottomText"
+            android:id="@+id/view_traveler"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="3dp"
+            android:layout_below="@+id/view_traveler">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/bottomTravelerRL">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Total Charge"
+                    android:id="@+id/tv_TravelerBottomChargeText" />
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="90dp"
+                    android:id="@+id/im_lasttravelerBottomim"
+                    android:src="@mipmap/i"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="$140.67"
+                    android:textColor="#6639ff"
+                    android:id="@+id/tv_TravelerBottomTextTotalCost"
+                    android:layout_below="@+id/tv_TravelerBottomChargeText"/>
+            </RelativeLayout>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/Bt_SingleTravelerCountinue"
+                android:layout_marginRight="5dp"
+                android:textColor="#ffe"
+                android:textStyle="bold"
+                android:background="#dd4f43"
+                android:text="Continue" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>
+

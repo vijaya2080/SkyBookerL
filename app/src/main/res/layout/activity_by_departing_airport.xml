@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context="in.example.skybooker.slider.flightstatus.ByDepartingAirport">
+
+    <include
+        android:id="@+id/departAirportToolBar"
+        layout="@layout/toollayout">
+    </include>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/departAirportMainLayout"
+        android:layout_below="@+id/departAirportToolBar"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp">
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/text_input_departAirportLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Depart Airport*"
+                android:id="@+id/et_departAirportLayout"
+                android:inputType="text"
+                android:maxLines="1">
+                <requestFocus/>
+                </EditText>
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/text_input_arrivalAirportLayout"
+            android:layout_below="@+id/text_input_departAirportLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Arrival Airport*"
+                android:id="@+id/et_arrivalAirportLayout"
+                android:inputType="text"
+                android:maxLines="1"/>
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/text_input_DepartAirlineLayout"
+            android:layout_below="@+id/text_input_arrivalAirportLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Airline*"
+                android:id="@+id/et_departAirlineLayout"
+                android:drawableEnd="@mipmap/spinner"
+                android:maxLines="1"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_departAirportDate"
+            android:layout_below="@+id/text_input_DepartAirlineLayout"
+            android:text="Depart Date"
+            android:textSize="15dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:id="@+id/departAirpotSpinnerLayout"
+            android:layout_below="@+id/tv_departAirportDate">
+
+            <CheckBox
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Yesterday"
+                android:textSize="10dp"
+                android:layout_weight="1"
+                android:id="@+id/checkBoxYesterday"
+                />
+            <CheckBox
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Today"
+                android:textSize="10dp"
+                android:layout_weight="1"
+                android:id="@+id/checkBoxToday"
+                />
+            <CheckBox
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Tomorrow"
+                android:textSize="10dp"
+                android:layout_weight="1"
+                android:id="@+id/checkBoxTomorrow"
+                />
+
+        </LinearLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/text_input_departDepartTimeLayout"
+            android:layout_below="@+id/departAirpotSpinnerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Depart Time*"
+                android:id="@+id/et_DepartTimeLayout"
+                android:drawableEnd="@mipmap/spinner"
+                android:maxLines="1"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Check Now"
+            android:id="@+id/btDepartAirport"
+            android:textColor="#fff"
+            android:background="#dd4f43"
+            android:layout_marginBottom="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="in.example.skybooker">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CRENDTIALS" />
+
+    <application
+        android:name=".SingleTon"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name=".myaccount.billing.BillingDetailsActivity"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+
+        <activity android:name=".flightsearch.SearchFlightActivty" />
+
+        <activity android:name=".flightsearch.FromListOfFlightsActivity" />
+
+        <activity android:name=".flightsearch.ToListOfFlightActivity" />
+
+        <activity android:name=".flightsearch.SelectDateActivity" />
+
+        <activity
+            android:name=".SignInOrRegister"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+
+        <activity
+            android:name=".myaccount.rewards.RewardsActivity"
+            android:label="@string/title_activity_rewards"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".flightsearch.relatedflights.payment.TermsAndConditions" />
+
+        <activity
+            android:name=".myaccount.WelcomeActivity"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+
+        <activity
+            android:name=".MainActivity"
+            android:windowSoftInputMode="adjustPan|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".myaccount.mydetails.MyDetailsActivity"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+
+        <activity
+            android:name=".myaccount.billing.AddBillingDetails"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+
+        <activity android:name=".myaccount.billing.PaymentPolicyActivity" />
+
+        <activity android:name=".myaccount.billing.PrivacyPolicyActivity" />
+
+        <activity android:name=".myaccount.billing.NortonSecuredSealAcitivity" />
+
+        <activity android:name=".myaccount.cotravelers.CoTravellersActivity" />
+
+        <activity
+            android:name=".myaccount.cotravelers.AddCoTravelerActivity"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+
+        <activity android:name=".communication.SliderPrivacyPolicy" />
+
+        <activity android:name=".communication.SliderFeedbackActivity" />
+
+        <activity android:name=".communication.SliderSettingsActivity" />
+
+        <activity android:name=".slider.HotelsActivity" />
+
+        <activity android:name=".slider.CarRentals" />
+
+        <activity android:name=".slider.FlightStatus" />
+
+        <activity android:name=".flightsearch.relatedflights.review.SeatSelection" />
+
+        <activity android:name=".communication.AirLineNumber" />
+
+        <activity android:name=".communication.settings.SettingsCountry" />
+
+        <activity android:name=".myaccount.mybookings.MyBookings" />
+
+        <activity android:name=".myaccount.mywhishlist.MyWishList" />
+
+        <activity android:name=".slider.flightstatus.ByFlight" />
+
+        <activity android:name=".slider.flightstatus.ByDepartingAirport" />
+
+        <activity android:name=".slider.flightstatus.ByArrivalAiport" />
+
+        <activity android:name=".slider.flightstatus.ByRoute" />
+
+        <activity android:name=".communication.settings.SettingsCurrency" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <activity android:name=".slider.MyTrips" />
+
+        <activity android:name=".flightsearch.fragments.roundtrip.RoundTripFlights"
+            android:windowSoftInputMode="adjustPan|adjustResize"/>
+
+        <activity android:name=".filters.FiltersActivity" />
+
+        <activity android:name=".flightsearch.relatedflights.review.ReviewActivity" />
+
+        <activity
+            android:name=".flightsearch.relatedflights.travelers.TravellerActivity"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+
+        <activity android:name=".FlexibleDates" />
+
+        <activity android:name=".flightsearch.relatedflights.payment.PaymentActivity"
+            android:windowSoftInputMode="adjustPan|adjustResize"/>
+
+        <activity android:name=".myaccount.password.PasswordActivity" />
+
+        <activity android:name=".flightsearch.relatedflights.PriceDetails" />
+
+        <activity android:name=".flightsearch.relatedflights.payment.TravelProtection" />
+
+        <activity android:name=".flightsearch.relatedflights.payment.TravelAssist" />
+
+        <activity android:name=".BestPriceGuarantee" />
+
+        <activity android:name=".flightsearch.relatedflights.review.TaxesAndFees" />
+
+        <activity android:name=".flightsearch.relatedflights.review.FareRules" />
+
+        <activity android:name=".flightsearch.relatedflights.review.BaggedFees" />
+
+        <activity android:name=".flightsearch.relatedflights.travelers.TSAPrivacyPolicy" />
+
+        <activity android:name=".flightsearch.fragments.oneway.OneWayFlights"/>
+
+        <activity android:name=".flightsearch.fragments.multicity.MulticityFlights"></activity>
+
+    </application>
+
+</manifest>

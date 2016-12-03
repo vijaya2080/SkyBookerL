@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:background="#ececec"
+    android:layout_marginTop="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/onewWayCostLayout"
+        android:layout_marginTop="5dp">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/right_arrow"
+            android:layout_alignParentRight="true"
+            android:id="@+id/onewayFlightNavigate"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$3041"
+            android:textSize="15dp"
+            android:id="@+id/tv_oneWayCost"
+            android:textColor="@color/colorPrimary"
+            android:layout_alignBottom="@+id/onewayFlightNavigate"
+            android:layout_toStartOf="@+id/onewayFlightNavigate" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/oneWayAirLineImg"
+            android:src="@android:mipmap/sym_def_app_icon"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/oneWayTimingLayout"
+        android:layout_below="@+id/onewWayCostLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/tv_OneWaydepartFromTime"
+            android:text="05:45PM"
+            android:textSize="12dp"
+            android:textColor="#000"/>
+
+        <!--<RelativeLayout
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/oneWayToAndFromRL">
+            <include layout="@layout/toandfromcity"/>
+        </RelativeLayout>-->
+        <LinearLayout
+            android:id="@+id/oneWayToAndFromRL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:layout_toRightOf="@+id/tv_OneWaydepartFromTime"
+            android:layout_toLeftOf="@+id/oneWayTodurationRL"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:id="@+id/oneWayTodurationRL">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_time"
+                android:textSize="12dp"
+                android:text="time"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_durationTime"
+                android:layout_below="@+id/tv_time"
+                android:textSize="10dp"
+                android:text="duration"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_durationdays"
+                android:layout_below="@+id/tv_durationTime"
+                android:textSize="10dp"
+                android:text="days"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/oneWayFlihtsSaving"
+        android:layout_below="@+id/oneWayTimingLayout"
+        android:text="sadkfdkjfheiofhndkjfh"
+        android:textSize="14dp"
+        android:textColor="#613c7e"
+        android:textStyle="bold"
+        android:layout_marginBottom="5dp"/>
+
+</RelativeLayout>

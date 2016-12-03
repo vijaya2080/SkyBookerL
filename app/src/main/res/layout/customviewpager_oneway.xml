@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:background="#fff">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/layout_customviewpagerrecent"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Recent Searches"
+            android:textColor="#3ab5e6"
+            android:layout_marginLeft="5dp"
+            android:layout_centerInParent="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/tv_RecentSearches"
+            />
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/layout_customviewpagerrecent"
+        android:background="@android:color/darker_gray"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#fff"
+        android:layout_marginTop="3dp"
+        android:layout_below="@+id/layout_customviewpagerrecent"
+        android:id="@+id/relativeLayout2">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/viewpager_toAndFromIcon"
+            android:src="@mipmap/svflight"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_vertical|left"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" HYD-Hyderabad,India"
+            android:maxLines="1"
+            android:id="@+id/viewpager_tvToAndFromTextBefore"
+            android:textSize="10dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/colorPrimary"
+            android:layout_alignTop="@+id/viewpager_toAndFromIcon"
+            android:layout_toRightOf="@+id/viewpager_toAndFromIcon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MAA-Chennai,India"
+            android:id="@+id/tvTo_viewpager"
+            android:textSize="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/viewpager_tvToAndFromTextBefore"
+            android:layout_toRightOf="@+id/viewpager_toAndFromIcon" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:id="@+id/straightarrow"
+            android:src="@mipmap/vparrow"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/viewpager_day"
+            android:layout_toRightOf="@+id/tvTo_viewpager"/>
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:id="@+id/rightarrow"
+            android:src="@mipmap/vparrow"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thu,Oct 27"
+            android:textSize="10dp"
+            android:id="@+id/viewpager_day"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/rightarrow"
+            android:layout_centerVertical="true"/>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

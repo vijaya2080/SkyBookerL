@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <RelativeLayout
+        android:id="@+id/maincontent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/img_bg">
+        <RelativeLayout
+            android:id="@+id/tool"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include
+                layout="@layout/app_bar_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+      <!--  <FrameLayout
+            android:id="@+id/mainpage"
+            android:layout_below="@+id/tool"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>-->
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_below= "@+id/tool"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:id="@+id/iconLayout"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="15dp"
+            android:layout_above="@+id/rlpatentbottom"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rv_flights"
+                android:layout_weight="1">
+                <include layout="@layout/custom_mainpage"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rv_hotels"
+                android:layout_weight="1"
+               >
+                <include layout="@layout/custom_mainpage"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rv_cars"
+                android:layout_weight="1">
+                <include layout="@layout/custom_mainpage"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rv_mytrips"
+                android:layout_weight="1">
+                <include layout="@layout/custom_mainpage"/>
+            </RelativeLayout>
+         </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rlpatentbottom"
+            android:layout_marginBottom="5dp"
+            android:layout_alignParentBottom="true">
+            <include layout="@layout/custom_activitymainbottom"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/sliderMain">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/header">
+                <include layout="@layout/nav_header_main"/>
+            </RelativeLayout>
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fillViewport="true"
+                android:id="@+id/navScroll"
+                android:layout_below="@+id/header">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/navScrollRelative">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/sliderRecycler">
+                        <android.support.v7.widget.RecyclerView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/sliderRv">
+                        </android.support.v7.widget.RecyclerView>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/customNavSignoutLayout"
+                        android:layout_below="@+id/sliderRecycler"
+                        android:visibility="gone"
+                        android:layout_marginTop="0dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginTop="10dp">
+                            <TextView
+                                android:id="@+id/tv_customNvSignout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:background="?attr/selectableItemBackground"
+                                android:textSize="15dp"
+                                android:text="Sign Out"
+                                />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="My Account"
+                                android:background="?attr/selectableItemBackground"
+                                android:textSize="15dp"
+                                android:padding="10dp"
+                                android:layout_marginTop="10dp"
+                                android:id="@+id/tv_customNvMyAccount"
+                                android:layout_below="@+id/tv_customNvSignout"/>
+                            </RelativeLayout>
+                    </RelativeLayout>
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical"
+                        android:id="@+id/settingsLayout"
+                        android:layout_below="@+id/customNavSignoutLayout"
+                        android:gravity="center_horizontal|bottom">
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@drawable/line"
+                            android:layout_marginTop="5dp"
+                            android:id="@+id/line"
+                            android:layout_centerHorizontal="true">
+
+                        </View>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tv_SliderSettings"
+                            android:text="Settings"
+                            android:padding="10dp"
+                            android:textSize="14dp"
+                            android:background="?attr/selectableItemBackground"
+                            android:layout_marginTop="10dp"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tv_sliderFeedback"
+                            android:text="Feedback"
+                            android:padding="10dp"
+                            android:textSize="14dp"
+                            android:background="?attr/selectableItemBackground" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tv_SliderTnC"
+                            android:background="?attr/selectableItemBackground"
+                            android:text="Terms and Conditions"
+                            android:padding="10dp"
+                            android:textSize="14dp"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tv_sliderPrivacy"
+                            android:text="Privacy Policy"
+                            android:background="?attr/selectableItemBackground"
+                            android:padding="10dp"
+                            android:textSize="14dp"/>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/callLayout"
+                            android:background="?attr/selectableItemBackground"
+                            android:padding="8dp"
+                            android:layout_marginBottom="10dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Call us for Support"
+                            android:id="@+id/tv_sliderCall"
+                            android:textSize="14dp"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_sliderCall"
+                            android:text="US and Canadian customers Only"
+                            android:textSize="10dp"
+
+                            />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </ScrollView>
+
+
+        </RelativeLayout>
+
+
+    </android.support.design.widget.NavigationView>
+
+
+</android.support.v4.widget.DrawerLayout>

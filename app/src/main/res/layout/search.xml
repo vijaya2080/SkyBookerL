@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolBar">
+        <include layout="@layout/toolbar"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolBar"
+        android:id="@+id/searchLayout"
+        android:background="#125688">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/etSearch"
+            android:maxLines="1"
+            android:textColor="#fff"
+            android:hint="Enter Airport"
+            android:textColorHint="#fff"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_centerVertical="true">
+            <requestFocus/>
+        </EditText>
+
+        <!--<SearchView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/searchView"
+            android:queryHint="Enter airport name"
+            android:tag="Enter Airportname"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" >
+        <requestFocus/>
+        </SearchView>-->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/searchImg"
+            android:src="@android:drawable/ic_menu_compass"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"  />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/nearByLayout"
+        android:background="#fff"
+        android:layout_below="@id/searchLayout">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvNearByAirports"
+            android:text="Nearby Airports"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"/>
+    </RelativeLayout>
+
+
+    <!--<android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rvNearByAirports"
+        android:layout_below="@+id/nearByLayout"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="3dp"
+        android:scrollbars="vertical"
+        />-->
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:focusable="false"
+        android:background="#fff"
+        android:dividerHeight="3dp"
+        android:focusableInTouchMode="false"
+        android:layout_below="@+id/nearByLayout" />
+
+
+</RelativeLayout>

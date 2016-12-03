@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="#fff">
+
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/toAndFromIcon"
+        android:src="@mipmap/to"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="center_vertical|left"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" Text"
+        android:maxLines="1"
+        android:id="@+id/tvToAndFromTextBeforeto"
+        android:textSize="15dp"
+        android:paddingLeft="15dp"
+        android:textColor="@color/colorPrimary"
+        android:layout_alignStart="@+id/tvToAndFromCityBefore"
+        android:layout_alignTop="@+id/toAndFromIcon"
+        android:layout_alignEnd="@+id/tvToAndFromCityBefore" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="enter city"
+        android:id="@+id/tvToAndFromCityBefore"
+        android:textSize="15dp"
+        android:paddingLeft="15dp"
+        android:maxLines="1"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/tvToAndFromTextBeforeto"
+        android:layout_toEndOf="@+id/toAndFromIcon" />
+</RelativeLayout>

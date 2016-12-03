@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:contentInsetLeft="0dp"
+            android:contentInsetRight="0dp"
+            android:contentInsetStart="0dp"
+            android:minHeight="?attr/actionBarSize"
+            android:padding="0dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/toolBackImg"
+                    android:src="@android:drawable/ic_media_previous"
+                    android:layout_gravity="center|center_horizontal|left"/>
+
+            </FrameLayout>
+        </android.support.v7.widget.Toolbar>
+
+        <TextView
+            android:id="@+id/tv_fromCity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="From airport"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:textColor="@android:color/white"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="70dp" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolArrow"
+            android:src="@android:drawable/button_onoff_indicator_off"
+            android:layout_toRightOf="@+id/tv_fromCity"
+            android:layout_marginTop="7dp"/>
+        <TextView
+            android:id="@+id/tv_toCity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To airport"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:textColor="@android:color/white"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/toolArrow" />
+        <TextView
+            android:id="@+id/tv_fromJourneryDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="From Journey Date"
+            android:textSize="12sp"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:textColor="@android:color/white"
+            android:layout_below="@+id/tv_fromCity"
+            android:layout_marginLeft="70dp" />
+        <TextView
+            android:id="@+id/ToJourneryDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" To Journey Date"
+            android:textSize="12sp"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:textColor="@android:color/white"
+            android:layout_toRightOf="@+id/tv_fromJourneryDate"
+            android:layout_below="@+id/tv_toCity"
+            android:layout_marginLeft="10dp" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

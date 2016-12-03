@@ -1,0 +1,23 @@
+<android.support.v7.widget.Toolbar android:id="@+id/appbar_top"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:minHeight="?attr/actionBarSize"
+    android:background="#125688"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/appName"
+           android:text="SkyBooker"
+           android:textSize="20sp"
+           android:layout_gravity="center_horizontal|left"
+           android:textColor="#fff"/>
+
+    </FrameLayout>
+
+
+</android.support.v7.widget.Toolbar>

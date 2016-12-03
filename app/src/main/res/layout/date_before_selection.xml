@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="#fff">
+
+    <ImageView
+        android:id="@+id/calanderImgBefore"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@mipmap/calander"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="center_vertical|left"
+        android:layout_centerVertical="true" />
+
+    <TextView
+        android:id="@+id/calanderTextBefore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Depart"
+        android:textSize="14dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="#3ab5e6"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@+id/calanderImgBefore"/>
+
+    <TextView
+        android:id="@+id/tvCalanderDayBefore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="12dp"
+        android:layout_below="@+id/calanderTextBefore"
+        android:layout_alignStart="@+id/calanderTextBefore"/>
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text=""
+        android:textSize="15dp"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="2dp"
+        android:layout_toRightOf="@+id/tvCalanderDayBefore"
+        android:layout_below="@+id/calanderTextBefore"
+        />
+
+</RelativeLayout>

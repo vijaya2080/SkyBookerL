@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="3dp"
+    android:layout_weight="5">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/tv_toFlightTimesEx"
+        android:text="02:40p"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_toFlightStopNameEx"
+        android:layout_weight="1"
+        android:layout_centerVertical="true"
+        android:text="JLR"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_weight="1"
+        android:id="@+id/im_toandfromflightExDetails"
+        android:src="@mipmap/toandfromflightimage"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_fromFlightExTimes"
+        android:layout_weight="1"
+        android:layout_centerVertical="true"
+        android:text="04:40a"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_fromFlightExStopName"
+        android:layout_weight="1"
+        android:layout_centerVertical="true"
+        android:text="LBD"/>
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_weight="1"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/fly"
+        android:id="@+id/im_ReviewDetailsim"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_fromFlightExJournyTime"
+        android:layout_centerVertical="true"
+        android:layout_weight="1"
+        android:layout_alignParentRight="true"
+        android:text="totaltime"/>
+
+</LinearLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:layout_marginTop="3dp"
+    android:layout_marginBottom="3dp">
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:id="@+id/img_customRv"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="13dp"
+        android:src="@drawable/common_google_signin_btn_icon_dark_disabled" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_customRvTitle"
+        android:layout_toRightOf="@+id/img_customRv"
+        android:text="hello"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"
+        android:textSize="12dp"
+        android:layout_marginTop="7dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_customRvSubTitle"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/img_customRv"
+        android:layout_below="@+id/tv_customRvTitle"
+        android:text="hioepqefr"
+        android:textSize="10dp"/>
+
+
+
+</RelativeLayout>
